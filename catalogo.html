@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <head>
+      <link href="styles.css" rel="stylesheet" type="text/css"/>
+      <header>
+        <div class = "tarjeta"/>
+        <img class= "imagen0" src= "logo.png"/>
+        <img class="imagenTitulo" src="titulo.png" />
+        <div class= "registro">
+         <form>
+          <div class="email">
+            <input type="email" name="email" placeholder=" Usuario o e-mail" />
+          </div>
+          <div class="password">
+            <input type="password" name="password" placeholder=" Contrase&ntilde;a" />
+          </div>
+          <p>
+            <div class="u">
+              <input type="radio" name="ua" value="u" required /><h4>Usuario</h4>
+            </div>
+            <div class="a">
+              <input type="radio" name="ua" value="a" required /><h5>Administrador</h5>
+            </div>
+         </p>
+         <button Class="Iniciar">Iniciar sesi&oacute;n</button>
+         <button class="Registrarse">Registrarse</button>
+      </header>
+      <section>
+        <ul>
+         <li><a href="inicio.html">Inicio</a></li>
+         <li><a href="registro.html">Registrarse</a></li>
+        </ul>
+      </section>
+      <article>
+        <div class ="marco">
+          <h6 class= "buscarCatalogo">Buscar</h6>
+          <select id="juegoSeleccionado" class="seleccionarJuego">
+            <option disable>Ver catalogo</option>
+            <option value="gta">GTA V</option>
+            <option value="cod">COD: Modern Warzone</option>
+            <option value="borderlands">Borderlands 3</option>
+          </select>
+          <article class="articleChico">
+            <div>
+              <label  class=etiquetaNombre >Nombre</label>
+              <label class=etiquetaPrecio >Precio</label>
+              <label class=etiquetaComprar >Comprar</label>
+            </div>
+            <label1 class=nombreGame></label1>
+            <label2 class=price></label2>
+            <img class="carrito" src="carrito.png" />
+          </article>
+          <script>
+            let seleccion =document.querySelector('select');
+            let nombreJuego= document.querySelector('label1');
+            let precio= document.querySelector('label2');
+            seleccion.addEventListener('change', mostrarInfo);
+            function mostrarInfo(){
+              let opcion = seleccion.value;
+              if (opcion==='gta'){
+                nombreJuego.textContent ='GTA V'
+                precio.textContent= '14.990'
+              }
+              else if(opcion === 'cod'){
+                nombreJuego.textContent='COD Warzone'
+                precio.textContent='12.990'
+              }
+              else if(opcion === 'borderlands'){
+                nombreJuego.textContent='Borderlands 3'
+                precio.content='14.990'
+              }
+            }
+          </script>
+
+      </div>
+      </article>
+    </head>
+    <footer>
+    </footer>
+  </body>
+</html>
